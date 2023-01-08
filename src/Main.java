@@ -13,7 +13,7 @@ public class Main {
         strings.add("aaa");
         strings.add("aaab");
         strings.add("aaabb");
-        makeTable(strings, 4);
+        makeTable(strings, 3);
     }
 
     public static void makeTable(List<String> strings, int columnCount) {
@@ -23,11 +23,11 @@ public class Main {
         for(String str: strings){
             counter++;
             if(counter==columnCount) {
-                System.out.println(String.format("%"+maxSize+"s", str));
+                System.out.println(String.format("%-"+maxSize+"s", str));
                 counter = 0;
                 continue;
             }
-            System.out.print(String.format("%"+maxSize+"s", str));
+            System.out.print(String.format("%-"+maxSize+"s", str));
         }
 
     }
